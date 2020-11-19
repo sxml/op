@@ -23,6 +23,15 @@ svn co https://github.com/ophub/op/trunk/router/s905x3_phicomm-n1/install-progra
 # ==========luci-theme-url==========
 # svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-theme-bootstrap-mod package/luci-theme-bootstrap-mod
 
+# 编译 po2lmo (如果有po2lmo可跳过)
+pushd package/luci-app-openclash/tools/po2lmo
+make && sudo make install
+popd
+
+# udp2raw 
+git clone https://github.com/sxml/openwrt-udp2raw.git package/udp2raw-tunnel
+git clone https://github.com/sxml/luci-app-udp2raw.git package/luci-app-udp2raw
+
 packages=" \
 brcmfmac-firmware-43430-sdio brcmfmac-firmware-43455-sdio kmod-brcmfmac wpad kmod-fs-ext4 kmod-fs-vfat kmod-fs-exfat dosfstools e2fsprogs antfs-mount \
 kmod-usb-storage kmod-usb-storage-extras kmod-usb-storage-uas kmod-usb-net kmod-usb-net-asix-ax88179 kmod-usb-net-rtl8150 kmod-usb-net-rtl8152 \
