@@ -39,7 +39,7 @@ env:
   OUT_PATH: router/s905x3_phicomm-n1/out
   OPENWRT_PATH: router/s905x3_phicomm-n1/openwrt
   MAKE_FILE: router/s905x3_phicomm-n1/make
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   UPLOAD_COWTRANSFER: false
@@ -163,7 +163,7 @@ jobs:
         mkdir -p $OPENWRT_PATH
         cp -rf openwrt/bin/targets/*/*/*.tar.gz $OPENWRT_PATH
         sudo chmod +x $MAKE_FILE
-        sudo $MAKE_FILE -d -b n1_x96_hk1_h96_octopus -k 5.4.77_5.9.8
+        sudo $MAKE_FILE -d -b x96_octopus -k 5.4.77_5.9.8
         cd $OUT_PATH && gzip *.img
         cp -f ../openwrt/*.tar.gz . && sync
         echo "FILEPATH=$PWD" >> $GITHUB_ENV
