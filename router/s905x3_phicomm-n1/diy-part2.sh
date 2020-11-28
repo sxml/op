@@ -25,6 +25,7 @@ svn co https://github.com/ophub/op/trunk/router/s905x3_phicomm-n1/install-progra
 
 # passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray package/Xray-core
 
 # miniupnpd
 # svn co https://github.com/openwrt/packages/trunk/net/miniupnpd package/miniupnpd
