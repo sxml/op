@@ -23,9 +23,11 @@ svn co https://github.com/ophub/op/trunk/router/s905x3_phicomm-n1/install-progra
 # ==========luci-theme-url==========
 # svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-theme-bootstrap-mod package/luci-theme-bootstrap-mod
 
+# passwall
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
 
 # miniupnpd
-svn co https://github.com/openwrt/packages/trunk/net/miniupnpd package/miniupnpd
+# svn co https://github.com/openwrt/packages/trunk/net/miniupnpd package/miniupnpd
 
 packages=" \
 brcmfmac-firmware-43430-sdio brcmfmac-firmware-43455-sdio kmod-brcmfmac wpad kmod-fs-ext4 kmod-fs-vfat kmod-fs-exfat dosfstools e2fsprogs antfs-mount \
